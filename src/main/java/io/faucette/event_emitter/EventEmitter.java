@@ -52,7 +52,7 @@ public class EventEmitter implements Emitter {
 
         if (eventList != null) {
             for (Emitter.Callback callback: eventList) {
-                callback.call(args);
+                callback.call(this, args);
             }
         }
     }

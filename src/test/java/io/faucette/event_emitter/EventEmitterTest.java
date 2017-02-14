@@ -16,13 +16,13 @@ public class EventEmitterTest {
 
         Emitter.Callback trueCallback = emitter.on("test", new Emitter.Callback() {
             @Override
-            public void call(Object[] args) {
+            public void call(Emitter emitter, Object[] args) {
                 trueCalled.set(true);
             }
         });
         Emitter.Callback falseCallback = emitter.on("test", new Emitter.Callback() {
             @Override
-            public void call(Object[] args) {
+            public void call(Emitter emitter, Object[] args) {
                 falseCalled.set(true);
             }
         });

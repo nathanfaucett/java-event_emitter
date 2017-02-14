@@ -4,7 +4,7 @@ package io.faucette.event_emitter;
 public interface Emitter {
 
     public interface Callback {
-        void call(Object[] args);
+        void call(Emitter emitter, Object[] args);
     }
 
     int getEventCount(String name);
